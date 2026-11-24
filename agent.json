@@ -1,0 +1,35 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "海关数据营销专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "授权企业级海关数据检索、主体匹配及线索补充。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "海关",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "ft-customs-prospecting"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-customs-specialist.git",
+    "branch": "main"
+  }
+}
